@@ -113,13 +113,13 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 #	"all": [
 #		"gym_management_system.tasks.all"
 #	],
-#	"daily": [
-#		"gym_management_system.tasks.daily"
-#	],
+	"daily": [
+		"gym_management_system.gym_management_system.doctype.gym_class_booking.gym_class_booking.notification_mail"
+	],
 #	"hourly": [
 #		"gym_management_system.tasks.hourly"
 #	],
@@ -129,7 +129,7 @@ app_license = "MIT"
 #	"monthly": [
 #		"gym_management_system.tasks.monthly"
 #	],
-# }
+}
 
 # Testing
 # -------

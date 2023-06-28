@@ -25,7 +25,7 @@ Gym Workout Plan Exercise (Child Table) Gym Settings
 These doctypes are only for reference, you should add any additional doctypes that are necessary. Make sure that your system has at least one of each type of doctype:
 
 Standard DocType
- Child DocType 
+Child DocType 
 Submittable DocType 
 Single DocType
 Roles

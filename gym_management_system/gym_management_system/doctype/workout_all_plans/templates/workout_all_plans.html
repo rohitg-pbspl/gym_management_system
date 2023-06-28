@@ -1,0 +1,42 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1 class="text-center">{{ title }}</h1>
+
+
+
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+        <tr>
+            <th>#</th>
+            <th>Weekday</th>
+            <th>Workout</th>
+        </tr>
+    </thead>
+
+    {% for workout in doc.workout_plan_exercise %}
+
+    <tbody>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center">
+                    <div class="ms-3">
+                        <p class="fw-normal">{{loop.index}}</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <p class="fw-bold mb-1">{{workout.weekly}}</p>
+            </td>
+            <td>{{workout.workout}}</td>
+        </tr>
+    </tbody>
+
+    {% endfor %}
+
+  </table>
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

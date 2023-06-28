@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-06-27 10:58:49.808251",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"class\",\"Gym Class Booking\"],[\"_aggregate_column\",\"Gym Class Booking\"]],\"order_by\":\"`tabGym Class Booking`.`modified` desc\",\"page_length\":20,\"column_widths\":{\"class\":120,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabGym Class Booking`.`class`\",\"aggregate_function\":\"count\"},\"chart_args\":{\"chart_type\":\"bar\",\"x_axis\":\"class\",\"y_axes\":[\"_aggregate_column\"]}}",
+ "modified": "2023-06-27 11:09:24.016864",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Mostly Booked Class",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Gym Class Booking",
+ "report_name": "Mostly Booked Class",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
