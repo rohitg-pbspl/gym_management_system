@@ -18,5 +18,5 @@ class CardioMachineSubscription(Document):
    self.remaining_days = (self.end_date - datetime.date.today()).days
    
    if self.remaining_days <= 0:
-       
+       self.remaining_days = 0 
        self.status = 'Expired'

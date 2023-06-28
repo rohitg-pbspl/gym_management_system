@@ -16,7 +16,8 @@
   "gender",
   "date_of_birth",
   "age",
-  "email_id"
+  "email_id",
+  "amended_from"
  ],
  "fields": [
   {
@@ -81,11 +82,21 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "gym member name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Members",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-06-26 12:51:50.059383",
+ "modified": "2023-06-28 16:07:15.745745",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Members",

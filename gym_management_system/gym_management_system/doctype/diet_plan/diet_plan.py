@@ -18,4 +18,5 @@ class DietPlan(Document):
    self.duration = (end_date - start_date).days
    
    if datetime.date.today() > end_date:
+       self.duration = 0
        self.status = "Expired"

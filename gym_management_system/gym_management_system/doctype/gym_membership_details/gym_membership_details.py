@@ -23,7 +23,7 @@ class GymMembershipDetails(Document):
   self.validity_ends_indays = (self.last_date_of_plan - datetime.date.today()).days
   
   if self.validity_ends_indays <= 0:
-      
+      self.validity_ends_indays = 0
       self.status = 'Expired'
 
 

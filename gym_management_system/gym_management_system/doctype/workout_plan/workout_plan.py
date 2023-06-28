@@ -17,7 +17,8 @@ class WorkoutPlan(Document):
    self.duration = (end_date - start_date).days
    
    if datetime.date.today() > end_date:
-       status = "Expired"
+       self.duration = 0
+       self.status = "Expired"
        
        
 @frappe.whitelist()
