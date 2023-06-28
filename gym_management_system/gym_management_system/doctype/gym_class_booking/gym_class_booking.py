@@ -43,7 +43,7 @@ def notification_mail():
     # display only date using date() function
    for i in a:
     
-    if i.date().strftime("%A") == "Wednesday" == datetime.date.today().strftime("%A") and i.date() == datetime.date.today():
+    if i.date().strftime("%A") == "Saturday" == datetime.date.today().strftime("%A") and i.date() == datetime.date.today():
       
       
       frappe.sendmail(
@@ -53,6 +53,8 @@ def notification_mail():
         message = f"""In this week you have attended {item['class']} class and it is valid upto {item['end_date']}
       Trainer of this class is {item['trainer']}"""
       )
+      
+      print("mail_sent")
       
       
     
