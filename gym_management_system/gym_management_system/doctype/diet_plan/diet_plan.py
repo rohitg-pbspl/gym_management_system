@@ -5,18 +5,18 @@
 from frappe.model.document import Document
 import datetime
 
+
 class DietPlan(Document):
 
-    
-  def before_save(self):
-      
-   start_date = datetime.datetime.strptime(self.start_date, '%Y-%m-%d').date()
-   
-   end_date = datetime.datetime.strptime(self.end_date, '%Y-%m-%d').date()
-   
-   
-   self.duration = (end_date - start_date).days
-   
-   if datetime.date.today() > end_date:
-       self.duration = 0
-       self.status = "Expired"
+    def before_save(self):
+
+        start_date = datetime.datetime.strptime(
+            self.start_date, '%Y-%m-%d').date()
+
+        end_date = datetime.datetime.strptime(self.end_date, '%Y-%m-%d').date()
+
+        self.duration = (end_date - start_date).days
+
+        if datetime.date.today() > end_date:
+            self.duration = 0
+            self.status = "Expired"

@@ -30,14 +30,13 @@
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Gym Member",
    "options": "Gym Members"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-28 16:21:55.253863",
+ "modified": "2023-06-30 00:15:53.931401",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Trainer Rating",

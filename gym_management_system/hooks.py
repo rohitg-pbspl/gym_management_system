@@ -206,4 +206,10 @@ scheduler_events = {
 # ]
 
 
-website_catch_all = "not_found"
+# Override the 404 page
+website_route_rules = [
+	{"from_route": "/404", "to_route": "/not_found"},
+]
+
+# Update the app_name with your custom app's name
+app_name = "gym_management_system"

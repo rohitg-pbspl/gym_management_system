@@ -68,13 +68,15 @@
   {
    "fieldname": "remaining_days",
    "fieldtype": "Int",
-   "label": "Remaining Days in Validity"
+   "label": "Remaining Days in Validity",
+   "read_only": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
    "options": "Active\nExpired",
+   "read_only": 1,
    "reqd": 1
   }
  ],
@@ -85,7 +87,7 @@
    "link_fieldname": "rating"
   }
  ],
- "modified": "2023-06-28 15:51:30.251475",
+ "modified": "2023-06-29 23:52:14.790428",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Professional Trainer Subscription",
@@ -124,7 +126,8 @@
    "read": 1,
    "report": 1,
    "role": "Gym Member",
-   "share": 1
+   "share": 1,
+   "write": 1
   },
   {
    "email": 1,

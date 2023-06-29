@@ -39,6 +39,7 @@
    "fieldname": "fees",
    "fieldtype": "Int",
    "label": "Fees",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -72,7 +73,8 @@
   {
    "fieldname": "remaining_days",
    "fieldtype": "Int",
-   "label": "Remaining Days in Validity"
+   "label": "Remaining Days in Validity",
+   "read_only": 1
   },
   {
    "fieldname": "status",
@@ -85,7 +87,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-24 13:57:51.766696",
+ "modified": "2023-06-30 00:06:57.431110",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Class Booking",
@@ -100,6 +102,29 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
    "share": 1,
    "write": 1
   }
