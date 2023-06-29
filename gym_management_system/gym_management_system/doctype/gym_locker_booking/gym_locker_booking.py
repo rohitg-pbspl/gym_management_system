@@ -30,5 +30,20 @@ class GymLockerBooking(Document):
       self.remaining_lockers = data[-1][-1] - 1
     else:
       frappe.throw("Number of Remaining Lockers are zero please contact 'Gym Admin'")
+      
+      
+@frappe.whitelist()
+
+def user_name():
+  get_user = frappe.db.get_value("Gym Members", filters={'name1':frappe.get_user().load_user().name}, fieldname=['name'])
+    
+  gym_locker = frappe.db.get_value("Gym Locker Booking", filters={'assigned_to':get_user}, fieldname=['name'])
+  
+  if gym_locker is not None:
+    return "Error"
+  else:
+    return get_user
+  
+  
      
      

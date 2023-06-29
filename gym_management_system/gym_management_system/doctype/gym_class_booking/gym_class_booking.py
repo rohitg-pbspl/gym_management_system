@@ -26,8 +26,8 @@ class GymClassBooking(Document):
     
 def notification_mail():
 
+
  docs = frappe.get_list("Gym Class Booking", filters={'status':'Active'}, fields = ["class", "gym_member", "trainer", "start_date", "end_date"])
- 
  
  for index, item in enumerate(docs):
    
@@ -53,8 +53,6 @@ def notification_mail():
         message = f"""In this week you have attended {item['class']} class and it is valid upto {item['end_date']}
       Trainer of this class is {item['trainer']}"""
       )
-      
-      print("mail_sent")
       
       
     
