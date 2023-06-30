@@ -1,0 +1,57 @@
+{% extends 'templates/web.html' %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% block page_content %}
+<title>Plan Details</title>
+
+<div class="card text-center bg-info">
+    <div class="card-header h3">
+        {{ frappe.get_fullname() }}
+      </div>
+    <div class="card-body ">
+      <h5 class="card-title">My Active Gym Membership Plan</h5>
+    </div>
+    {% for plan in plans %}
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-info text-white">Plan for : {{plan.select_plan}}</li>
+      <li class="list-group-item bg-info text-white">Trainer Name: {{plan.trainer_name}} | Contact Number: {{plan.trainer_contact}}</li>
+      <li class="list-group-item bg-info text-white">Activation Date : {{plan.activation_date}}</li>
+      <li class="list-group-item bg-info text-white">Last Date : {{plan.last_date_of_plan}}</li>
+      <li class="list-group-item bg-info text-white">Validity ends in (days) : {{plan.validity_ends_indays}}</li>
+      <li class="list-group-item bg-info text-white">Amount : ₹ {{plan.amount}}</li>
+    </ul>
+    {% endfor %}
+</div>
+
+
+<div>
+<h3 class="text-center my-lg-5"> Past Plans Details </h3>
+
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="text-white bg-info">Plan for</th>
+            <th scope="col" class="text-white bg-info">Trainer Name</th>
+            <th scope="col" class="text-white bg-info">Activation Date</th>
+            <th scope="col" class="text-white bg-info">Last Date</th>
+            <th scope="col" class="text-white bg-info">Time Slot</th>
+            <th scope="col" class="text-white bg-info">Amount Paid</th>
+          </tr>
+        </thead>
+        {% for plans in expired_plans%}
+        <tbody>
+          <tr>
+            <th scope="row">{{plans.select_plan}}</th>
+            <td>{{plans.trainer_name}}</td>
+            <td>{{plans.activation_date}}</td>
+            <td>{{plans.last_date_of_plan}}</td>
+            <td>{{plans.time_slot}}</td>
+            <td>₹ {{plans.amount}}</td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+</div>
+
+
+{% endblock page_content %}
