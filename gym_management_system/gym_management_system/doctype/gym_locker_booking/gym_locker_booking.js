@@ -9,7 +9,7 @@ frappe.ui.form.on('Gym Locker Booking', {
 	},
 	locker_number: function (frm) {
 		frappe.call({
-				method: "gym_management_system.gym_management_system.doctype.gym_locker_booking.gym_locker_booking.user_name"
+				method: "gym_management_system.gym_management_system.doctype.gym_locker_booking.gym_locker_booking.check_locker_assigned"
 			})
 			.then((r) => {
 				if (frappe.session.user != 'Administrator' && r.message != "Error") {
