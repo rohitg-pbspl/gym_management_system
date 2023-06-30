@@ -8,7 +8,6 @@ frappe.ui.form.on('Gym Class Booking', {
 			})
 			.then((r) => {
 				if (frm.is_new()){
-					console.log("hiiii")
 					if (frappe.session.user != 'Administrator') {
 						cur_frm.set_df_property("gym_member", "read_only", 1);
 						frm.set_value('gym_member', r.message);
