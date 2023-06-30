@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WOP.###.",
+ "creation": "2023-06-22 09:44:15.086286",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "workout_goal",
+  "member_name",
+  "status",
+  "column_break_herhu",
+  "start_date",
+  "end_date",
+  "duration",
+  "section_break_tgclo",
+  "workout_plan_exercise"
+ ],
+ "fields": [
+  {
+   "fieldname": "workout_goal",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Workout Goal",
+   "options": "Workout All Plans",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Read Only",
+   "label": "Duration(in days)"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workout_plan_exercise",
+   "fieldtype": "Table",
+   "label": "Workout Plan Exercise",
+   "options": "Workout Plan Exercise"
+  },
+  {
+   "fieldname": "column_break_herhu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tgclo",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-27 18:00:24.740269",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Workout Plan",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
