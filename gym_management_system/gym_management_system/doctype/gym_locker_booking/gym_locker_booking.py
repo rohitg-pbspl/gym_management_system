@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from gym_management_system.gym_management_system.doctype.cardio_machine_subscription.cardio_machine_subscription import user_name
 
 
 class GymLockerBooking(Document):
@@ -35,14 +36,12 @@ class GymLockerBooking(Document):
 
 
 @frappe.whitelist()
-def user_name():
-    get_user = frappe.db.get_value("Gym Members", filters={
-                                   'name1': frappe.get_user().load_user().name}, fieldname=['name'])
+def check_locker_assigned():
 
     gym_locker = frappe.db.get_value("Gym Locker Booking", filters={
-                                     'assigned_to': get_user}, fieldname=['name'])
+                                     'assigned_to': user_name()}, fieldname=['name'])
 
     if gym_locker is not None:
         return "Error"
     else:
-        return get_user
+        return user_name()
