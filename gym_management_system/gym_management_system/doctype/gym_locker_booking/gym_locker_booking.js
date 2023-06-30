@@ -3,20 +3,29 @@
 
 frappe.ui.form.on('Gym Locker Booking', {
 	refresh: function (frm) {
+		if (frappe.session.user != 'Administrator'){
+			frm.set_df_property("assigned_to", "read_only", 1);
+		}
+	},
+	locker_number: function (frm) {
 		frappe.call({
 				method: "gym_management_system.gym_management_system.doctype.gym_locker_booking.gym_locker_booking.user_name"
 			})
 			.then((r) => {
-
+				console.log(r.message)
 				if (frappe.session.user != 'Administrator' && r.message != "Error") {
 					cur_frm.set_df_property("assigned_to", "read_only", 1);
 					frm.set_value('assigned_to', r.message);
-				} else {
+				} else if (frappe.session.user != 'Administrator' && r.message == "Error"){
 					cur_frm.set_df_property("assigned_to", "read_only", 1);
-					frappe.throw("You have already booked locker")
+				    frappe.throw("You have already booked locker")
+				} else {
+					
 				}
 
 			})
 
-	}
+	},
+
+
 });

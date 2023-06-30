@@ -8,10 +8,10 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "assigned_to",
   "locker_number",
   "total_lockers",
-  "remaining_lockers"
+  "remaining_lockers",
+  "assigned_to"
  ],
  "fields": [
   {
@@ -51,7 +51,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-24 13:15:27.483299",
+ "modified": "2023-06-30 11:59:35.860514",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Locker Booking",
