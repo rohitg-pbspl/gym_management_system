@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "GMD.###",
+ "creation": "2023-06-21 18:25:12.312594",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "member_name",
+  "trainer_name",
+  "trainer_contact",
+  "gym_member",
+  "trainer",
+  "status",
+  "activation_date",
+  "current_month",
+  "last_date_of_plan",
+  "valid_no_of_days",
+  "column_break_yfubk",
+  "validity_ends_indays",
+  "time_slot",
+  "mode_of_payment",
+  "order_details_section",
+  "select_plan",
+  "column_break_drevt",
+  "amount",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "time_slot",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Time Slot",
+   "options": "05:00 AM to 07:00 AM\n06:00 AM to 08:00 AM\n05:00 PM to 07:00 PM\n06:00 PM to 08:00 PM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Activation Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_no_of_days",
+   "fieldtype": "Int",
+   "label": "Valid No of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode of Payment",
+   "options": "Cash\nUPI\nAccount Transfer"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Member",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "validity_ends_indays",
+   "fieldtype": "Int",
+   "label": "Validity Ends in(Days)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_date_of_plan",
+   "fieldtype": "Date",
+   "label": "Last Date of Plan",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yfubk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "select_plan",
+   "fieldtype": "Link",
+   "label": "Select Plan",
+   "options": "Membership Plans",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "select_plan.amount",
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_drevt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fetch_from": "gym_member.gym_member_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Gym Member Name"
+  },
+  {
+   "fetch_from": "trainer.trainer_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Trainer Name"
+  },
+  {
+   "fetch_from": "trainer.mobile_number",
+   "fieldname": "trainer_contact",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Trainer Mobile Number"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Read Only",
+   "label": "Currency",
+   "options": "INR"
+  },
+  {
+   "fieldname": "current_month",
+   "fieldtype": "Read Only",
+   "label": "Current Month",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-26 17:49:05.797115",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Membership Details",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

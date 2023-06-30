@@ -1,0 +1,166 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DP{###}",
+ "creation": "2023-06-22 09:48:48.252912",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "diet_goal",
+  "status",
+  "assigned_to_member",
+  "member_name",
+  "weight",
+  "height_in_inch",
+  "column_break_mmy1s",
+  "trainer",
+  "start_date",
+  "end_date",
+  "duration",
+  "section_break_2ciqe",
+  "diet_plan_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "diet_goal",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Diet Goal",
+   "options": "Mass Gain\nWeight Loss\nAbs",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nExpired"
+  },
+  {
+   "fieldname": "assigned_to_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned to Member",
+   "options": "Gym Members",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "assigned_to_member.gym_member_name",
+   "fetch_if_empty": 1,
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Member Name"
+  },
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "diet_plan_details",
+   "fieldtype": "Table",
+   "label": "Diet Plan Details",
+   "options": "Diet Plan Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Int",
+   "label": "Weight",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "height_in_inch",
+   "fieldtype": "Float",
+   "label": "Height (in Inch)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mmy1s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_2ciqe",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-27 10:25:01.285158",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Diet Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
