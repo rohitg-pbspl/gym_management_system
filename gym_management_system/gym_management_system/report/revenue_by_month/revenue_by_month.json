@@ -1,5 +1,5 @@
 {
- "add_total_row": 0,
+ "add_total_row": 1,
  "columns": [],
  "creation": "2023-06-26 18:04:36.085475",
  "disable_prepared_report": 0,
@@ -9,7 +9,7 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-06-29 15:49:11.278006",
+ "modified": "2023-06-30 14:29:22.309439",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Revenue by Month",

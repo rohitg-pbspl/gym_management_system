@@ -13,6 +13,7 @@
   "gym_member",
   "start_date",
   "end_date",
+  "month",
   "column_break_gjxmm",
   "validity",
   "remaining_days",
@@ -94,11 +95,17 @@
    "fieldtype": "Select",
    "label": "Machine Condition",
    "options": "Working Properly\nNot Working Properly"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Month"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-30 00:00:03.531900",
+ "modified": "2023-06-30 14:11:27.244720",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Cardio Machine Subscription",
