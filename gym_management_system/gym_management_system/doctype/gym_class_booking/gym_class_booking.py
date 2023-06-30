@@ -36,11 +36,11 @@ def notification_mail():
 
         item['email'] = email
 
-        a = pd.date_range(start=item["start_date"], end=item["end_date"])
+        date_range_between_class_validity = pd.date_range(start=item["start_date"], end=item["end_date"])
 
-        for i in a:
+        for dates in date_range_between_class_validity:
 
-            if i.date().strftime("%A") == "Saturday" == datetime.date.today().strftime("%A") and i.date() == datetime.date.today():
+            if dates.date().strftime("%A") == "Saturday" == datetime.date.today().strftime("%A") and dates.date() == datetime.date.today():
 
                 frappe.sendmail(
                     recipients=[item["email"]],

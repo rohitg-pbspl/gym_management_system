@@ -12,12 +12,11 @@ class CardioMachineSubscription(Document):
 
         start_date = datetime.datetime.strptime(
             self.start_date, '%Y-%m-%d').date()
+        
+        self.month = start_date.strftime('%B')
 
         doc = frappe.get_doc("Plans", self.validity)
         
-        self.month = datetime.date(
-            2021, (int(str(start_date)[5:7])), 1).strftime('%B')
-
         self.end_date = start_date + datetime.timedelta(days=int(doc.validity))
 
         self.remaining_days = (self.end_date - datetime.date.today()).days

@@ -13,8 +13,7 @@ class GymMembershipDetails(Document):
         activation_date = datetime.datetime.strptime(
             self.activation_date, '%Y-%m-%d').date()
 
-        self.current_month = datetime.date(
-            2021, (int(str(activation_date)[5:7])), 1).strftime('%B')
+        self.current_month = activation_date.strftime('%B')
 
         months_to_add = int(self.select_plan[0])
 
