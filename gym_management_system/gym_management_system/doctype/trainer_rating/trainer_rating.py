@@ -7,10 +7,3 @@ from frappe.model.document import Document
 
 class TrainerRating(Document):
     pass
-
-@frappe.whitelist()
-def user_name():
-    get_user = frappe.db.get_value("Gym Members", filters={
-                                   'name1': frappe.get_user().load_user().name}, fieldname=['name'])
-
-    return get_user

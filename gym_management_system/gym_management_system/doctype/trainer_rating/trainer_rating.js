@@ -4,7 +4,7 @@
 frappe.ui.form.on('Trainer Rating', {
 	refresh: function (frm) {
 		frappe.call({
-				method: "gym_management_system.gym_management_system.doctype.trainer_rating.trainer_rating.user_name"
+				method: "gym_management_system.gym_management_system.doctype.cardio_machine_subscription.cardio_machine_subscription.user_name"
 				
 			})
 			.then((r) => {

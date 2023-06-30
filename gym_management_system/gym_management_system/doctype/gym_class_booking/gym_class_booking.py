@@ -36,11 +36,8 @@ def notification_mail():
 
         item['email'] = email
 
-        # specify the start date is 2021 jan 1 st
-        # specify the end date is 2021 feb 1 st
         a = pd.date_range(start=item["start_date"], end=item["end_date"])
 
-        # display only date using date() function
         for i in a:
 
             if i.date().strftime("%A") == "Saturday" == datetime.date.today().strftime("%A") and i.date() == datetime.date.today():
@@ -54,9 +51,3 @@ def notification_mail():
                 )
 
 
-@frappe.whitelist()
-def user_name():
-    get_user = frappe.db.get_value("Gym Members", filters={
-                                   'name1': frappe.get_user().load_user().name}, fieldname=['name'])
-
-    return get_user
