@@ -47,13 +47,13 @@ cmd.<br>
 23. sudo nano /etc/mysql/my.cnf <br>
 <b>Paste below things in the my.cnf configuration file :</b><br>
     
-    [mysqld] <br>
-    innodb-file-format=barracuda <br>
-    innodb-file-per-table=1<br>
-    innodb-large-prefix=1<br>
-    character-set-client-handshake = FALSE<br>
-    character-set-server = utf8mb4<br>
-    collation-server = utf8mb4_unicode_ci<br>
+    [mysqld] 
+    innodb-file-format=barracuda 
+    innodb-file-per-table=1
+    innodb-large-prefix=1
+    character-set-client-handshake = FALSE
+    character-set-server = utf8mb4
+    collation-server = utf8mb4_unicode_ci
     <br>
 --Press ctrl+o<br>
 --Press Enter<br>
