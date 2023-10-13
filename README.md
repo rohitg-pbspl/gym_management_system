@@ -54,7 +54,7 @@ cmd.<br>
     character-set-client-handshake = FALSE
     character-set-server = utf8mb4
     collation-server = utf8mb4_unicode_ci
-    <br>
+
 --Press ctrl+o<br>
 --Press Enter<br>
 --Press ctrl+x<br>
